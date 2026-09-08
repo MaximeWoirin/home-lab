@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Cloudflare dynamic DNS synchronization hourly
+
+[Timer]
+OnBootSec=5m
+OnUnitActiveSec=1h
+Persistent=true
+Unit=cloudflare-ddns.service
+
+[Install]
+WantedBy=timers.target

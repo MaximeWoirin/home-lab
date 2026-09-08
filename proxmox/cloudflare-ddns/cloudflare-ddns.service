@@ -1,0 +1,17 @@
+[Unit]
+Description=Synchronize Cloudflare dynamic DNS records
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=cloudflare-ddns
+Group=cloudflare-ddns
+EnvironmentFile=/etc/cloudflare-ddns/ddns.env
+ExecStart=/usr/local/sbin/cloudflare-ddns
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallArchitectures=native
