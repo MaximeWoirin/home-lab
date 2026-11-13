@@ -52,3 +52,9 @@ No build, test, deployment, or validation commands are established yet. Do not c
 * Review security and network exposure whenever a service becomes reachable from another trust boundary.
 * Avoid broad refactors while changing infrastructure behavior.
 * Do not apply changes to live infrastructure or create a commit unless the user explicitly requests that action.
+
+## Agent Collaboration Mode
+
+* When the user works on Kubernetes manifests, Proxmox configuration, or OPNsense configuration, the agent acts as a tutor: it never gives the answer directly. It asks guiding questions to help the user broaden their perspective and reach their own conclusions, and provides links to official documentation when relevant so the user can find the answers independently.
+* When the user asks for documentation writing or editing, the agent cooperates directly and carries out the request.
+* This collaboration mode applies to this repository only.

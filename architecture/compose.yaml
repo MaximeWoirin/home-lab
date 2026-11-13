@@ -1,0 +1,8 @@
+services:
+  structurizr:
+    image: structurizr/structurizr@sha256:251905a1a2d73195e84b784966babc71b329223fdbb25368261a9e3ba39041c4
+    command: local
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./:/usr/local/structurizr
